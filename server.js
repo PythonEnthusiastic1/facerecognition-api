@@ -39,7 +39,7 @@ app.put('/image', (req, res) => {image.handleImagePut(req, res, db)})
 app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt)})
 app.post('/register', (req, res) => {register.handleRegister(req, res, db, bcrypt, saltRounds)})
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
 	console.log('our app is running');
 })
 
